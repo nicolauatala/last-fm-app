@@ -11,7 +11,7 @@ final class HomeViewModel {
 
 	private var serivce: HomeServiceProtocol
 	private var pageCounter = 1
-	private var topAlbums: TopAlbums?
+	private(set) var topAlbums: TopAlbums?
 
 	init(service: HomeServiceProtocol) {
 		self.serivce = service
