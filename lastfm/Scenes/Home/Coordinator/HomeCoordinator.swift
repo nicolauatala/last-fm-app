@@ -14,7 +14,9 @@ class HomeCoordinator: Coordinator {
 
 	init(window: UIWindow) {
 		self.window = window
-		homeViewController = HomeViewController()
+		let homeService = HomeService()
+		let homeViewModel = HomeViewModel(service: homeService)
+		homeViewController = HomeViewController(viewModel: homeViewModel)
 	}
 
 	func start() {

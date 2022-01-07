@@ -16,6 +16,7 @@
 		891776AB2787BAAC008E4221 /* Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891776AA2787BAAC008E4221 /* Albums.swift */; };
 		891776AD2787BAC5008E4221 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891776AC2787BAC5008E4221 /* Artist.swift */; };
 		891776AF2787BAF1008E4221 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891776AE2787BAF1008E4221 /* Image.swift */; };
+		891776B227885DAC008E4221 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891776B127885DAC008E4221 /* HomeViewModel.swift */; };
 		8979C9C12787941E008136DE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8979C9C02787941E008136DE /* Alamofire.framework */; platformFilter = ios; };
 		8979C9C22787941E008136DE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8979C9C02787941E008136DE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		898DB3DF27879792002EBBFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898DB3DD27879792002EBBFE /* HomeViewController.swift */; };
@@ -73,6 +74,7 @@
 		891776AA2787BAAC008E4221 /* Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Albums.swift; sourceTree = "<group>"; };
 		891776AC2787BAC5008E4221 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		891776AE2787BAF1008E4221 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		891776B127885DAC008E4221 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		8979C9C02787941E008136DE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		898DB3DD27879792002EBBFE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		898DB3DE27879792002EBBFE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -148,6 +150,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		891776B027885D68008E4221 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				891776B127885DAC008E4221 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		891776B3278861DA008E4221 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				898DB3E527879888002EBBFE /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		8979C9BF2787941E008136DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,10 +185,11 @@
 		898DB3DC27879761002EBBFE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				891776B3278861DA008E4221 /* Coordinator */,
+				891776B027885D68008E4221 /* ViewModel */,
 				891776A22787AD60008E4221 /* Service */,
 				898DB3DD27879792002EBBFE /* HomeViewController.swift */,
 				898DB3DE27879792002EBBFE /* HomeViewController.xib */,
-				898DB3E527879888002EBBFE /* HomeCoordinator.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -387,6 +406,7 @@
 				898DB3E2278797C8002EBBFE /* AppCoordinator.swift in Sources */,
 				891776A12787A757008E4221 /* APIRouter.swift in Sources */,
 				89B8AAC92787787100A25477 /* AppDelegate.swift in Sources */,
+				891776B227885DAC008E4221 /* HomeViewModel.swift in Sources */,
 				898DB3E4278797FE002EBBFE /* Coordinator.swift in Sources */,
 				891776AF2787BAF1008E4221 /* Image.swift in Sources */,
 				891776A42787AD75008E4221 /* HomeService.swift in Sources */,
