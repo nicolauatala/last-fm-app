@@ -11,7 +11,7 @@ final class HomeViewModel {
 
 	private var serivce: HomeServiceProtocol
 	private var pageCounter = 1
-	private(set) var topAlbums: TopAlbums?
+	private(set) var topAlbums: Observable<TopAlbums?> = Observable(nil)
 
 	init(service: HomeServiceProtocol) {
 		self.serivce = service
@@ -19,8 +19,9 @@ final class HomeViewModel {
 
 	func getTopAlbums() {
 		serivce.getTopAlbums(page: pageCounter) { [weak self] (response) in
+			guard let self = self else { return }
 			if let response = response {
-				self?.topAlbums = response
+				self.topAlbums.value = response
 			}
 		}
 	}

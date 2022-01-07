@@ -15,3 +15,10 @@ struct Albums: Codable {
 		case attr = "@attr"
 	}
 }
+
+// MARK: - AlbumsAttr
+struct AlbumsAttr: Codable {
+	let tag, page, perPage, totalPages: String
+	let total: String
+}
+

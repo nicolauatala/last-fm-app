@@ -17,6 +17,12 @@ struct Album: Codable {
 		case name, mbid, url, artist, image
 		case attr = "@attr"
 	}
+
+	func largeUrlImage() -> String? {
+		return self.image.filter { elm in
+			elm.size.rawValue == "large"
+		}.first?.text
+	}
 }
 
 // MARK: - AlbumAttr

@@ -9,10 +9,3 @@
 struct TopAlbums: Codable {
 	let albums: Albums
 }
-
-
-// MARK: - AlbumsAttr
-struct AlbumsAttr: Codable {
-	let tag, page, perPage, totalPages: String
-	let total: String
-}

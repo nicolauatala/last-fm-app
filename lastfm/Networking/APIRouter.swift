@@ -25,7 +25,7 @@ enum APIRouter: APIURLRequest {
 		case .topAlbums(let page):
 			return ([
 				"tag": "hip-hop",
-				"limit": "10",
+				"limit": "26",
 				"method": "tag.getTopAlbums",
 				"page": page
 			])
