@@ -20,6 +20,7 @@ class HomeService: HomeServiceProtocol {
 					print(response)
 					switch response.result {
 					case .success(let response):
+						TopAlbumsRepository.shared.update(with: response)
 						completion(response)
 					case .failure(let error):
 						print(error)

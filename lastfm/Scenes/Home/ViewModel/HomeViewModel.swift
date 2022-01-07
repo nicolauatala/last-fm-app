@@ -18,11 +18,18 @@ final class HomeViewModel {
 	}
 
 	func getTopAlbums() {
+		loadLastFetchFromRepository()
 		serivce.getTopAlbums(page: pageCounter) { [weak self] (response) in
 			guard let self = self else { return }
 			if let response = response {
 				self.topAlbums.value = response
 			}
 		}
+	}
+
+	func loadLastFetchFromRepository() {
+		guard let list = TopAlbumsRepository.shared.lestFetch() else { return }
+		topAlbums.value = list
+		return
 	}
 }
