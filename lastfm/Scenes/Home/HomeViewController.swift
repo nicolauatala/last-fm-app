@@ -13,4 +13,11 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
     }
 
+	override func viewDidAppear(_ animated: Bool) {
+		let service = HomeService()
+		service.getTopAlbums(page: 1) { response in
+			print(response)
+		}
+	}
+
 }
