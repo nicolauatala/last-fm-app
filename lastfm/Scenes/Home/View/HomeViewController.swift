@@ -11,6 +11,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
 
 	internal let viewModel: HomeViewModel
 	private var collectionView: UICollectionView?
+	internal var isLoading: Bool = false
 
 	init(viewModel: HomeViewModel) {
 		self.viewModel = viewModel
@@ -28,7 +29,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
     }
 
 	override func viewDidAppear(_ animated: Bool) {
-		viewModel.getTopAlbums()
+		loadTopAlbums()
 	}
 
 	private func setupCollectionView() {
@@ -51,12 +52,17 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
 	}
 
 	private func bindData() {
-		viewModel.topAlbums.bind { [weak self] (_) in
+		viewModel.albums.bind { [weak self] (_) in
 			guard let self = self else { return }
 			DispatchQueue.main.async {
 				self.collectionView?.reloadData()
+				self.isLoading = false
 			}
 		}
+	}
+
+	func loadTopAlbums() {
+		viewModel.getTopAlbums()
 	}
 
 }

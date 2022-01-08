@@ -9,7 +9,8 @@ import UIKit
 
 extension HomeViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return viewModel.topAlbums.currentValue?.albums.album.count ?? 0
+		print(viewModel.albums.currentValue.count)
+		return viewModel.albums.currentValue.count
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -17,15 +18,23 @@ extension HomeViewController: UICollectionViewDataSource {
 															for: indexPath) as? AlbumCollectionViewCell else {
 			preconditionFailure("Invalid cell type")
 		}
-		if let albumList = viewModel.topAlbums.currentValue?.albums.album {
-			let album = albumList[indexPath.row] as Album
-			cell.name.text = album.name
-			if let imageURL = album.largeUrlImage() {
-				cell.loadImage(imageURL)
-			}
+		let topAlbums = viewModel.albums.currentValue
+		let album = topAlbums[indexPath.row] as Album
+		cell.name.text = album.name
+		if let imageURL = album.largeUrlImage() {
+			cell.loadImage(imageURL)
 		}
 
 		return cell
+	}
+
+	func scrollViewDidScroll(_ scrollView: UIScrollView) {
+		let contentOffsetY = scrollView.contentOffset.y
+		if contentOffsetY >= (scrollView.contentSize.height - scrollView.bounds.height) - 44 {
+			guard !self.isLoading, viewModel.albums.currentValue.count > 0 else { return }
+			self.isLoading = true
+			loadTopAlbums()
+		}
 	}
 
 	//	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
