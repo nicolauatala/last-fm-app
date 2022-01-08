@@ -5,12 +5,11 @@
 //  Created by Nicolau Atala on 07/01/22.
 //
 
-
 import Foundation
 
 final class TopAlbumsRepository: TopAlbumsRepositoryProtocol {
 	static var shared: TopAlbumsRepositoryProtocol = TopAlbumsRepository()
-	private var repository = DefaultRepository<TopAlbums>(with: "top-albums-repository")
+	private var repository = DefaultRepository<TopAlbums>(with: RepositoryKeys.topAlbums)
 	private var topAlbums: TopAlbums?
 
 	init() {
@@ -29,7 +28,7 @@ final class TopAlbumsRepository: TopAlbumsRepositoryProtocol {
 }
 
 protocol TopAlbumsRepositoryProtocol {
-	static var shared: TopAlbumsRepositoryProtocol { get set }
+	static var shared: TopAlbumsRepositoryProtocol { get }
 	func update(with list: TopAlbums)
 	func lestFetch() -> TopAlbums?
 }

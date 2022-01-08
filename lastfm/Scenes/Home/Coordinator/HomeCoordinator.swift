@@ -21,5 +21,6 @@ class HomeCoordinator: Coordinator {
 
 	func start() {
 		window.rootViewController = homeViewController
+		_ = AppSettingsRepository.shared
 	}
 }

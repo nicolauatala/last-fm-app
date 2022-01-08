@@ -29,6 +29,12 @@
 		8927C1F42788F4B6001A7DC4 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C1F32788F4B6001A7DC4 /* RepositoryProtocol.swift */; };
 		8927C1F62788F4D9001A7DC4 /* DefaultRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C1F52788F4D9001A7DC4 /* DefaultRepository.swift */; };
 		8927C1F82788F6A4001A7DC4 /* TopAlbumsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C1F72788F6A4001A7DC4 /* TopAlbumsRepository.swift */; };
+		8927C1FB2789A5E3001A7DC4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C1FA2789A5E3001A7DC4 /* UIView+Extension.swift */; };
+		8927C1FD2789A9BC001A7DC4 /* AppSettingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C1FC2789A9BC001A7DC4 /* AppSettingsRepository.swift */; };
+		8927C2002789AABC001A7DC4 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C1FF2789AABC001A7DC4 /* AppSettings.swift */; };
+		8927C2052789B2EC001A7DC4 /* RepositoryKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C2042789B2EC001A7DC4 /* RepositoryKeys.swift */; };
+		8927C2082789CC1A001A7DC4 /* HomeViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C2072789CC1A001A7DC4 /* HomeViewController+UICollectionViewDataSource.swift */; };
+		8927C20A2789CC4A001A7DC4 /* HomeViewController+UICollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C2092789CC4A001A7DC4 /* HomeViewController+UICollectionViewDelegateFlowLayout.swift */; };
 		898DB3DF27879792002EBBFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898DB3DD27879792002EBBFE /* HomeViewController.swift */; };
 		898DB3E027879792002EBBFE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 898DB3DE27879792002EBBFE /* HomeViewController.xib */; };
 		898DB3E2278797C8002EBBFE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898DB3E1278797C8002EBBFE /* AppCoordinator.swift */; };
@@ -95,6 +101,12 @@
 		8927C1F32788F4B6001A7DC4 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		8927C1F52788F4D9001A7DC4 /* DefaultRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRepository.swift; sourceTree = "<group>"; };
 		8927C1F72788F6A4001A7DC4 /* TopAlbumsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlbumsRepository.swift; sourceTree = "<group>"; };
+		8927C1FA2789A5E3001A7DC4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		8927C1FC2789A9BC001A7DC4 /* AppSettingsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsRepository.swift; sourceTree = "<group>"; };
+		8927C1FF2789AABC001A7DC4 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		8927C2042789B2EC001A7DC4 /* RepositoryKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryKeys.swift; sourceTree = "<group>"; };
+		8927C2072789CC1A001A7DC4 /* HomeViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		8927C2092789CC4A001A7DC4 /* HomeViewController+UICollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UICollectionViewDelegateFlowLayout.swift"; sourceTree = "<group>"; };
 		898DB3DD27879792002EBBFE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		898DB3DE27879792002EBBFE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		898DB3E1278797C8002EBBFE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -166,6 +178,7 @@
 				891776AA2787BAAC008E4221 /* Albums.swift */,
 				891776AE2787BAF1008E4221 /* Image.swift */,
 				8927C1F0278899CC001A7DC4 /* Observable.swift */,
+				8927C1FF2789AABC001A7DC4 /* AppSettings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,8 +223,37 @@
 				8927C1F32788F4B6001A7DC4 /* RepositoryProtocol.swift */,
 				8927C1F52788F4D9001A7DC4 /* DefaultRepository.swift */,
 				8927C1F72788F6A4001A7DC4 /* TopAlbumsRepository.swift */,
+				8927C1FC2789A9BC001A7DC4 /* AppSettingsRepository.swift */,
+				8927C2042789B2EC001A7DC4 /* RepositoryKeys.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		8927C1F92789A5CB001A7DC4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8927C1FA2789A5E3001A7DC4 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8927C2012789B285001A7DC4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8927C2062789CC09001A7DC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8927C1E327888F68001A7DC4 /* Cell */,
+				898DB3DD27879792002EBBFE /* HomeViewController.swift */,
+				898DB3DE27879792002EBBFE /* HomeViewController.xib */,
+				8927C2072789CC1A001A7DC4 /* HomeViewController+UICollectionViewDataSource.swift */,
+				8927C2092789CC4A001A7DC4 /* HomeViewController+UICollectionViewDelegateFlowLayout.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8979C9BF2787941E008136DE /* Frameworks */ = {
@@ -234,12 +276,10 @@
 		898DB3DC27879761002EBBFE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8927C1E327888F68001A7DC4 /* Cell */,
+				8927C2062789CC09001A7DC4 /* View */,
 				891776B3278861DA008E4221 /* Coordinator */,
 				891776B027885D68008E4221 /* ViewModel */,
 				891776A22787AD60008E4221 /* Service */,
-				898DB3DD27879792002EBBFE /* HomeViewController.swift */,
-				898DB3DE27879792002EBBFE /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -268,6 +308,8 @@
 		89B8AAC72787787100A25477 /* lastfm */ = {
 			isa = PBXGroup;
 			children = (
+				8927C2012789B285001A7DC4 /* Manager */,
+				8927C1F92789A5CB001A7DC4 /* Extension */,
 				8927C1F22788F4A5001A7DC4 /* Repository */,
 				891776A52787ADE2008E4221 /* Model */,
 				8917769B27879B5B008E4221 /* Networking */,
@@ -437,11 +479,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8927C1FB2789A5E3001A7DC4 /* UIView+Extension.swift in Sources */,
 				898DB3E2278797C8002EBBFE /* AppCoordinator.swift in Sources */,
 				891776A12787A757008E4221 /* APIRouter.swift in Sources */,
 				89B8AAC92787787100A25477 /* AppDelegate.swift in Sources */,
+				8927C1FD2789A9BC001A7DC4 /* AppSettingsRepository.swift in Sources */,
 				891776B227885DAC008E4221 /* HomeViewModel.swift in Sources */,
 				8927C1F1278899CC001A7DC4 /* Observable.swift in Sources */,
+				8927C2082789CC1A001A7DC4 /* HomeViewController+UICollectionViewDataSource.swift in Sources */,
 				8927C1F82788F6A4001A7DC4 /* TopAlbumsRepository.swift in Sources */,
 				898DB3E4278797FE002EBBFE /* Coordinator.swift in Sources */,
 				8927C1E627888F9D001A7DC4 /* AlbumCollectionViewCell.swift in Sources */,
@@ -449,6 +494,8 @@
 				891776AF2787BAF1008E4221 /* Image.swift in Sources */,
 				891776A42787AD75008E4221 /* HomeService.swift in Sources */,
 				891776AB2787BAAC008E4221 /* Albums.swift in Sources */,
+				8927C2002789AABC001A7DC4 /* AppSettings.swift in Sources */,
+				8927C20A2789CC4A001A7DC4 /* HomeViewController+UICollectionViewDelegateFlowLayout.swift in Sources */,
 				891776AD2787BAC5008E4221 /* Artist.swift in Sources */,
 				8917769D27879BC6008E4221 /* APIURLRequest.swift in Sources */,
 				8917769F27879BEB008E4221 /* APIConstants.swift in Sources */,
@@ -458,6 +505,7 @@
 				898DB3DF27879792002EBBFE /* HomeViewController.swift in Sources */,
 				898DB3E627879888002EBBFE /* HomeCoordinator.swift in Sources */,
 				891776A92787BA7A008E4221 /* Album.swift in Sources */,
+				8927C2052789B2EC001A7DC4 /* RepositoryKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
