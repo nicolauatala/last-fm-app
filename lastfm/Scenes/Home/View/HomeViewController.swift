@@ -31,7 +31,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
 		viewModel.getTopAlbums()
 	}
 
-	fileprivate func setupCollectionView() {
+	private func setupCollectionView() {
 		collectionView = UICollectionView(frame: CGRect(x: 0,
 														y: 0,
 														width: view.bounds.width,
@@ -59,53 +59,4 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
 		}
 	}
 
-}
-
-
-extension HomeViewController: UICollectionViewDataSource {
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return viewModel.topAlbums.currentValue?.albums.album.count ?? 0
-	}
-
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCollectionViewCell.reuseIdentifier,
-															for: indexPath) as? AlbumCollectionViewCell else {
-			preconditionFailure("Invalid cell type")
-		}
-		if let albumList = viewModel.topAlbums.currentValue?.albums.album {
-			let album = albumList[indexPath.row] as Album
-			cell.name.text = album.name
-			if let imageURL = album.largeUrlImage() {
-				cell.loadImage(imageURL)
-			}
-		}
-
-		return cell
-	}
-
-//	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//		viewModel.showDetailView(with: indexPath.item)
-//	}
-}
-
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-	func collectionView(
-		_ collectionView: UICollectionView,
-		layout collectionViewLayout: UICollectionViewLayout,
-		sizeForItemAt indexPath: IndexPath
-	) -> CGSize {
-		let itemsPerRow: CGFloat = 2
-		let availableWidth = view.frame.width - 12
-		let widthPerItem = availableWidth / itemsPerRow
-
-		return CGSize(width: widthPerItem, height: widthPerItem)
-	}
-
-	func collectionView(
-		_ collectionView: UICollectionView,
-		layout collectionViewLayout: UICollectionViewLayout,
-		minimumLineSpacingForSectionAt section: Int
-	) -> CGFloat {
-		return 0.0
-	}
 }
