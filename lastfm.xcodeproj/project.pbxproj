@@ -42,6 +42,8 @@
 		8927C218278B5014001A7DC4 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C217278B5014001A7DC4 /* Tag.swift */; };
 		8927C21A278B503B001A7DC4 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C219278B503B001A7DC4 /* Track.swift */; };
 		8927C21C278B6700001A7DC4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C21B278B6700001A7DC4 /* String+Extension.swift */; };
+		8927C21F278B750E001A7DC4 /* AlbumViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C21E278B750E001A7DC4 /* AlbumViewModelTests.swift */; };
+		8927C221278B756E001A7DC4 /* MockAlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C220278B756E001A7DC4 /* MockAlbumService.swift */; };
 		898DB3DF27879792002EBBFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898DB3DD27879792002EBBFE /* HomeViewController.swift */; };
 		898DB3E027879792002EBBFE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 898DB3DE27879792002EBBFE /* HomeViewController.xib */; };
 		898DB3E2278797C8002EBBFE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898DB3E1278797C8002EBBFE /* AppCoordinator.swift */; };
@@ -121,6 +123,8 @@
 		8927C217278B5014001A7DC4 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		8927C219278B503B001A7DC4 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		8927C21B278B6700001A7DC4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		8927C21E278B750E001A7DC4 /* AlbumViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModelTests.swift; sourceTree = "<group>"; };
+		8927C220278B756E001A7DC4 /* MockAlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAlbumService.swift; sourceTree = "<group>"; };
 		898DB3DD27879792002EBBFE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		898DB3DE27879792002EBBFE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		898DB3E1278797C8002EBBFE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -308,6 +312,15 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		8927C21D278B74DD001A7DC4 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				8927C21E278B750E001A7DC4 /* AlbumViewModelTests.swift */,
+				8927C220278B756E001A7DC4 /* MockAlbumService.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
 		8979C9BF2787941E008136DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +394,7 @@
 		89B8AADE2787787400A25477 /* lastfmTests */ = {
 			isa = PBXGroup;
 			children = (
+				8927C21D278B74DD001A7DC4 /* Album */,
 				8927C1E027888485001A7DC4 /* Home */,
 			);
 			path = lastfmTests;
@@ -573,6 +587,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8927C21F278B750E001A7DC4 /* AlbumViewModelTests.swift in Sources */,
+				8927C221278B756E001A7DC4 /* MockAlbumService.swift in Sources */,
 				8927C1E22788849F001A7DC4 /* MockHomeService.swift in Sources */,
 				8927C1DF27888422001A7DC4 /* HomeViewModelTests.swift in Sources */,
 			);
