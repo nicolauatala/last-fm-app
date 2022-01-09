@@ -12,9 +12,11 @@ final class HomeViewModel {
 	private var serivce: HomeServiceProtocol
 	private var pageCounter = 1
 	private(set) var albums: Observable<[Album]> = Observable([])
-
-	init(service: HomeServiceProtocol) {
+	private weak var coordinatorDelegate: HomeViewModelCoordinatorDelegate?
+	
+	init(service: HomeServiceProtocol, coordinatorDelegate: HomeViewModelCoordinatorDelegate) {
 		self.serivce = service
+		self.coordinatorDelegate = coordinatorDelegate
 	}
 
 	func getTopAlbums() {
@@ -32,5 +34,10 @@ final class HomeViewModel {
 		guard let list = TopAlbumsRepository.shared.lestFetch() else { return }
 //		topAlbums.value = list
 		return
+	}
+
+	func albumDetail(with index: Int) {
+		let album = albums.currentValue[index]
+		coordinatorDelegate?.albumDetail(album)
 	}
 }

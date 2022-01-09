@@ -24,13 +24,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.title = "Top Albums"
 		setupCollectionView()
 		bindData()
-    }
-
-	override func viewDidAppear(_ animated: Bool) {
 		loadTopAlbums()
-	}
+    }
 
 	private func setupCollectionView() {
 		collectionView = UICollectionView(frame: CGRect(x: 0,

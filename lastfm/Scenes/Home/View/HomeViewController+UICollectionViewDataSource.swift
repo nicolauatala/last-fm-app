@@ -37,7 +37,7 @@ extension HomeViewController: UICollectionViewDataSource {
 		}
 	}
 
-	//	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-	//		viewModel.showDetailView(with: indexPath.item)
-	//	}
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		viewModel.albumDetail(with: indexPath.item)
+	}
 }
