@@ -19,7 +19,9 @@ class HomeService: HomeServiceProtocol {
 				DispatchQueue.main.async {
 					switch response.result {
 					case .success(let response):
-//						TopAlbumsRepository.shared.update(with: response)
+						if (page == 1) {
+							TopAlbumsRepository.shared.update(with: response)
+						}
 						completion(response)
 					case .failure(let error):
 						print(error)

@@ -20,7 +20,7 @@ final class HomeViewModel {
 	}
 
 	func getTopAlbums() {
-//		loadLastFetchFromRepository()
+		loadFirstPageFromRepository()
 		serivce.getTopAlbums(page: pageCounter) { [weak self] (response) in
 			guard let self = self else { return }
 			if let albums = response?.albums.album {
@@ -30,9 +30,10 @@ final class HomeViewModel {
 		}
 	}
 
-	func loadLastFetchFromRepository() {
-		guard let list = TopAlbumsRepository.shared.lestFetch() else { return }
-//		topAlbums.value = list
+	func loadFirstPageFromRepository() {
+		guard let list = TopAlbumsRepository.shared.lestFetch(), pageCounter == 1 else { return }
+		albums.value = list.albums.album
+		pageCounter += 1
 		return
 	}
 
