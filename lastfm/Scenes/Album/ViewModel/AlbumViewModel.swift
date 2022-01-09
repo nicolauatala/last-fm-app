@@ -10,6 +10,7 @@ import Foundation
 final class AlbumViewModel {
 	private var serivce: AlbumServiceProtocol
 	private(set) var album: Album
+	private(set) var details: Observable<AlbumInfo?> = Observable(nil)
 
 	init(service: AlbumServiceProtocol, album: Album) {
 		self.serivce = service
@@ -18,8 +19,7 @@ final class AlbumViewModel {
 
 	func getInfo() {
 		serivce.getInfo(album: album) { [weak self] (response) in
-			print(#function)
-			print(response)
+			self?.details.value = response
 		}
 	}
 
