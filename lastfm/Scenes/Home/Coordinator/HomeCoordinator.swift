@@ -30,9 +30,11 @@ class HomeCoordinator: Coordinator, HomeViewModelCoordinatorDelegate {
 		window.rootViewController = navigationController
 	}
 
-	func albumDetail(_ with: Album) {
-		print("\(#fileID) - \(#function) - with - \(with)")
-		navigationController.pushViewController(AlbumViewController(), animated: true)
+	func albumDetail(_ album: Album) {
+		print("\(#fileID) - \(#function) - with - \(album)")
+		let albumViewModel = AlbumViewModel(service: AlbumService(), album: album)
+		let albumViewController = AlbumViewController(viewModel: albumViewModel)
+		navigationController.pushViewController(albumViewController, animated: true)
 	}
 }
 

@@ -11,11 +11,12 @@ import Alamofire
 enum APIRouter: APIURLRequest {
 
 	case topAlbums(_ page: Int)
+	case albumInfo(artist: String, name: String)
 
 	// MARK: - HTTPMethod
 	var method: HTTPMethod {
 		switch self {
-		case .topAlbums:
+		case .topAlbums, .albumInfo:
 			return .get
 		}
 	}
@@ -28,6 +29,12 @@ enum APIRouter: APIURLRequest {
 				"limit": "26",
 				"method": "tag.getTopAlbums",
 				"page": page
+			])
+		case .albumInfo(let artist, let name):
+			return([
+				"method": "album.getinfo",
+				"artist": artist,
+				"album": name
 			])
 		}
 	}

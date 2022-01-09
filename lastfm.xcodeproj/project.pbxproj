@@ -38,6 +38,9 @@
 		8927C211278B2B38001A7DC4 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C20F278B2B38001A7DC4 /* AlbumViewController.swift */; };
 		8927C212278B2B38001A7DC4 /* AlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8927C210278B2B38001A7DC4 /* AlbumViewController.xib */; };
 		8927C214278B2B7D001A7DC4 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C213278B2B7D001A7DC4 /* AlbumViewModel.swift */; };
+		8927C216278B483E001A7DC4 /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C215278B483E001A7DC4 /* AlbumService.swift */; };
+		8927C218278B5014001A7DC4 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C217278B5014001A7DC4 /* Tag.swift */; };
+		8927C21A278B503B001A7DC4 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927C219278B503B001A7DC4 /* Track.swift */; };
 		898DB3DF27879792002EBBFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898DB3DD27879792002EBBFE /* HomeViewController.swift */; };
 		898DB3E027879792002EBBFE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 898DB3DE27879792002EBBFE /* HomeViewController.xib */; };
 		898DB3E2278797C8002EBBFE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898DB3E1278797C8002EBBFE /* AppCoordinator.swift */; };
@@ -113,6 +116,9 @@
 		8927C20F278B2B38001A7DC4 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		8927C210278B2B38001A7DC4 /* AlbumViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumViewController.xib; sourceTree = "<group>"; };
 		8927C213278B2B7D001A7DC4 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		8927C215278B483E001A7DC4 /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		8927C217278B5014001A7DC4 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		8927C219278B503B001A7DC4 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		898DB3DD27879792002EBBFE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		898DB3DE27879792002EBBFE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		898DB3E1278797C8002EBBFE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -180,11 +186,13 @@
 			children = (
 				891776A62787AE45008E4221 /* TopAlbums.swift */,
 				891776A82787BA7A008E4221 /* Album.swift */,
+				8927C219278B503B001A7DC4 /* Track.swift */,
 				891776AC2787BAC5008E4221 /* Artist.swift */,
 				891776AA2787BAAC008E4221 /* Albums.swift */,
 				891776AE2787BAF1008E4221 /* Image.swift */,
 				8927C1F0278899CC001A7DC4 /* Observable.swift */,
 				8927C1FF2789AABC001A7DC4 /* AppSettings.swift */,
+				8927C217278B5014001A7DC4 /* Tag.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 		8927C20E278B2B0C001A7DC4 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8927C215278B483E001A7DC4 /* AlbumService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -544,8 +553,11 @@
 				8927C211278B2B38001A7DC4 /* AlbumViewController.swift in Sources */,
 				891776A72787AE45008E4221 /* TopAlbums.swift in Sources */,
 				8927C1F62788F4D9001A7DC4 /* DefaultRepository.swift in Sources */,
+				8927C216278B483E001A7DC4 /* AlbumService.swift in Sources */,
+				8927C218278B5014001A7DC4 /* Tag.swift in Sources */,
 				8927C214278B2B7D001A7DC4 /* AlbumViewModel.swift in Sources */,
 				89B8AACB2787787100A25477 /* SceneDelegate.swift in Sources */,
+				8927C21A278B503B001A7DC4 /* Track.swift in Sources */,
 				898DB3DF27879792002EBBFE /* HomeViewController.swift in Sources */,
 				898DB3E627879888002EBBFE /* HomeCoordinator.swift in Sources */,
 				891776A92787BA7A008E4221 /* Album.swift in Sources */,
